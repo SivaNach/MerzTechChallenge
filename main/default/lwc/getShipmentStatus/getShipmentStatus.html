@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+           Shipment Status
+        </h3>
+        <div slot="footer">
+
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Tracking Number" value={trackingNumber} onchange={updateTrackingNumber}> </lightning-input>
+            <lightning-button label="Get Shipment Status" onclick={getShipmentStatus}></lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-textarea readonly value={shipmentStatus} rows="7" style="height:150px;"></lightning-textarea>
+        </div>   
+    </lightning-card>
+</template>
